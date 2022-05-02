@@ -1,0 +1,26 @@
+﻿@page "/"
+@using Blazority
+@inject IJSRuntime JsRuntime
+<h1>Virtualisation Framework</h1>
+
+<p>
+    Would you like to make a new concept environment or deploy a default one?
+</p>
+<br />
+<Button Label="Default" Variant="Primary"></Button>
+<Button Label="Custom" Variant="Info" @onclick="warning"></Button>
+
+@code {
+    async Task warning()
+    {
+        bool confirmed = await JsRuntime.InvokeAsync<bool>("confirm", "Are you sure?"); // Confirm
+
+        if (confirmed)
+        {
+            string prompted = await JsRuntime.InvokeAsync<string>("prompt", "thanks"); // Prompt
+
+        }
+    }
+}
+
+<SurveyPrompt Title="How is Blazor working for you?" />
