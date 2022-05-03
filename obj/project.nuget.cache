@@ -1,12 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "He6Qtyzbb7AFiRtfk+thLh8y1r9fJTpjGpSid8k+mPXqhJvOfBoZk+4uttg+p5EDuvP9QUiEpNAD4hLWAEYLzA==",
+  "dgSpecHash": "O3/7Vny1IAzxPVFCHU8trCr7FHA6QDfJt7LdbVpS12EErMNVWO+D1F5n+Cma3nB0Pj8eUh6lxMEcAe6ED8B8Uw==",
   "success": true,
   "projectFilePath": "C:\\Users\\cagla\\source\\repos\\VFrameworkBlazor\\VFrameworkBlazor\\VFrameworkBlazor.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\cagla\\.nuget\\packages\\amazon.jsii.runtime\\1.57.0\\amazon.jsii.runtime.1.57.0.nupkg.sha512",
     "C:\\Users\\cagla\\.nuget\\packages\\blazority\\0.11.0\\blazority.0.11.0.nupkg.sha512",
-    "C:\\Users\\cagla\\.nuget\\packages\\constructs\\10.0.25\\constructs.10.0.25.nupkg.sha512",
+    "C:\\Users\\cagla\\.nuget\\packages\\constructs\\10.0.130\\constructs.10.0.130.nupkg.sha512",
     "C:\\Users\\cagla\\.nuget\\packages\\hashicorp.cdktf\\0.10.3\\hashicorp.cdktf.0.10.3.nupkg.sha512",
     "C:\\Users\\cagla\\.nuget\\packages\\hashicorp.cdktf.providers.azurerm\\0.6.37\\hashicorp.cdktf.providers.azurerm.0.6.37.nupkg.sha512",
     "C:\\Users\\cagla\\.nuget\\packages\\microsoft.aspnetcore.authorization\\5.0.3\\microsoft.aspnetcore.authorization.5.0.3.nupkg.sha512",

@@ -1,5 +1,6 @@
 ﻿@page "/"
 @using Blazority
+@using VFrameworkBlazor.Terraform
 @inject IJSRuntime JsRuntime
 <h1>Virtualisation Framework</h1>
 
@@ -7,8 +8,18 @@
     Would you like to make a new concept environment or deploy a default one?
 </p>
 <br />
-<Button Label="Default" Variant="Primary"></Button>
+<Button Label="Default" Variant="Primary" @onclick="SynthDefault"></Button>
 <Button Label="Custom" Variant="Info" @onclick="warning"></Button>
+@code{
+    async Task SynthDefault()
+    {
+        HashiCorp.Cdktf.App app = new HashiCorp.Cdktf.App();
+        new Terraform.TfLogic(app, "azure");
+        app.Synth();
+        bool confirmed = await JsRuntime.InvokeAsync<bool>("confirm", "The Terraform files have been generated");
+
+    }
+}
 
 @code {
     async Task warning()

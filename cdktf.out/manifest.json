@@ -1,0 +1,13 @@
+{
+  "version": "0.10.3",
+  "stacks": {
+    "azure": {
+      "name": "azure",
+      "constructPath": "azure",
+      "workingDirectory": "stacks\\azure",
+      "synthesizedStackPath": "stacks\\azure\\cdk.tf.json",
+      "annotations": [],
+      "dependencies": []
+    }
+  }
+}

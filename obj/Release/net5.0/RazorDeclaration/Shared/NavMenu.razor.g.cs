@@ -4,7 +4,7 @@
 #pragma warning disable 0649
 #pragma warning disable 0169
 
-namespace VFrameworkBlazor.Pages
+namespace VFrameworkBlazor.Shared
 {
     #line hidden
     using System;
@@ -96,22 +96,7 @@ using HashiCorp.Cdktf.Providers.Azurerm;
 #line default
 #line hidden
 #nullable disable
-#nullable restore
-#line 2 "C:\Users\cagla\source\repos\VFrameworkBlazor\VFrameworkBlazor\Pages\Index.razor"
-using Blazority;
-
-#line default
-#line hidden
-#nullable disable
-#nullable restore
-#line 3 "C:\Users\cagla\source\repos\VFrameworkBlazor\VFrameworkBlazor\Pages\Index.razor"
-using VFrameworkBlazor.Terraform;
-
-#line default
-#line hidden
-#nullable disable
-    [Microsoft.AspNetCore.Components.RouteAttribute("/")]
-    public partial class Index : Microsoft.AspNetCore.Components.ComponentBase
+    public partial class NavMenu : Microsoft.AspNetCore.Components.ComponentBase
     {
         #pragma warning disable 1998
         protected override void BuildRenderTree(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder __builder)
@@ -119,38 +104,20 @@ using VFrameworkBlazor.Terraform;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 13 "C:\Users\cagla\source\repos\VFrameworkBlazor\VFrameworkBlazor\Pages\Index.razor"
-      
-    async Task SynthDefault()
-    {
-        HashiCorp.Cdktf.App app = new HashiCorp.Cdktf.App();
-        new Terraform.TfLogic(app, "azure");
-        app.Synth();
-        bool confirmed = await JsRuntime.InvokeAsync<bool>("confirm", "The Terraform files have been generated");
-
-    }
-
-#line default
-#line hidden
-#nullable disable
-#nullable restore
-#line 24 "C:\Users\cagla\source\repos\VFrameworkBlazor\VFrameworkBlazor\Pages\Index.razor"
+#line 28 "C:\Users\cagla\source\repos\VFrameworkBlazor\VFrameworkBlazor\Shared\NavMenu.razor"
        
-    async Task warning()
+    private bool collapseNavMenu = true;
+
+    private string NavMenuCssClass => collapseNavMenu ? "collapse" : null;
+
+    private void ToggleNavMenu()
     {
-        bool confirmed = await JsRuntime.InvokeAsync<bool>("confirm", "Are you sure?"); // Confirm
-
-        if (confirmed)
-        {
-            string prompted = await JsRuntime.InvokeAsync<string>("prompt", "thanks"); // Prompt
-
-        }
+        collapseNavMenu = !collapseNavMenu;
     }
 
 #line default
 #line hidden
 #nullable disable
-        [global::Microsoft.AspNetCore.Components.InjectAttribute] private IJSRuntime JsRuntime { get; set; }
     }
 }
 #pragma warning restore 1591

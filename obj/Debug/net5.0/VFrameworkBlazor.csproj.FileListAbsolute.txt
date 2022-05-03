@@ -62,7 +62,6 @@ C:\Users\cagla\source\repos\VFrameworkBlazor\VFrameworkBlazor\bin\Debug\net5.0\M
 C:\Users\cagla\source\repos\VFrameworkBlazor\VFrameworkBlazor\bin\Debug\net5.0\Microsoft.Extensions.DependencyInjection.dll
 C:\Users\cagla\source\repos\VFrameworkBlazor\VFrameworkBlazor\bin\Debug\net5.0\Microsoft.JSInterop.dll
 C:\Users\cagla\source\repos\VFrameworkBlazor\VFrameworkBlazor\bin\Debug\net5.0\System.IO.Pipelines.dll
-C:\Users\cagla\source\repos\VFrameworkBlazor\VFrameworkBlazor\obj\Debug\net5.0\VFrameworkBlazor.csproj.AssemblyReference.cache
 C:\Users\cagla\source\repos\VFrameworkBlazor\VFrameworkBlazor\bin\Debug\net5.0\Amazon.JSII.Runtime.dll
 C:\Users\cagla\source\repos\VFrameworkBlazor\VFrameworkBlazor\bin\Debug\net5.0\Constructs.dll
 C:\Users\cagla\source\repos\VFrameworkBlazor\VFrameworkBlazor\bin\Debug\net5.0\HashiCorp.Cdktf.dll
@@ -70,3 +69,5 @@ C:\Users\cagla\source\repos\VFrameworkBlazor\VFrameworkBlazor\bin\Debug\net5.0\M
 C:\Users\cagla\source\repos\VFrameworkBlazor\VFrameworkBlazor\bin\Debug\net5.0\Newtonsoft.Json.dll
 C:\Users\cagla\source\repos\VFrameworkBlazor\VFrameworkBlazor\bin\Debug\net5.0\System.Runtime.CompilerServices.Unsafe.dll
 C:\Users\cagla\source\repos\VFrameworkBlazor\VFrameworkBlazor\bin\Debug\net5.0\HashiCorp.Cdktf.Providers.Azurerm.dll
+C:\Users\cagla\source\repos\VFrameworkBlazor\VFrameworkBlazor\obj\Debug\net5.0\RazorDeclaration\Pages\Weather.razor.g.cs
+C:\Users\cagla\source\repos\VFrameworkBlazor\VFrameworkBlazor\obj\Debug\net5.0\Razor\Pages\Weather.razor.g.cs
