@@ -26,9 +26,9 @@ namespace VFrameworkBlazor.Terraform
             });
         }
 
-        public static void init()
+        public static void Init()
         {
-            HashiCorp.Cdktf.App app = new HashiCorp.Cdktf.App();
+            HashiCorp.Cdktf.App app = new();
             new TfLogic(app, "azure");
             app.Synth();
             
