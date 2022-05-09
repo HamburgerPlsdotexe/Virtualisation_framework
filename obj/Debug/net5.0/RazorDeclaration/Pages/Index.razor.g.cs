@@ -13,98 +13,98 @@ namespace VFrameworkBlazor.Pages
     using System.Threading.Tasks;
     using Microsoft.AspNetCore.Components;
 #nullable restore
-#line 1 "C:\Users\cagla\source\repos\VFrameworkBlazor\VFrameworkBlazor\_Imports.razor"
+#line 1 "C:\Users\CGU\source\repos\Virtualisation_framework\_Imports.razor"
 using System.Net.Http;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 2 "C:\Users\cagla\source\repos\VFrameworkBlazor\VFrameworkBlazor\_Imports.razor"
+#line 2 "C:\Users\CGU\source\repos\Virtualisation_framework\_Imports.razor"
 using Microsoft.AspNetCore.Authorization;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 3 "C:\Users\cagla\source\repos\VFrameworkBlazor\VFrameworkBlazor\_Imports.razor"
+#line 3 "C:\Users\CGU\source\repos\Virtualisation_framework\_Imports.razor"
 using Microsoft.AspNetCore.Components.Authorization;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 4 "C:\Users\cagla\source\repos\VFrameworkBlazor\VFrameworkBlazor\_Imports.razor"
+#line 4 "C:\Users\CGU\source\repos\Virtualisation_framework\_Imports.razor"
 using Microsoft.AspNetCore.Components.Forms;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 5 "C:\Users\cagla\source\repos\VFrameworkBlazor\VFrameworkBlazor\_Imports.razor"
+#line 5 "C:\Users\CGU\source\repos\Virtualisation_framework\_Imports.razor"
 using Microsoft.AspNetCore.Components.Routing;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 6 "C:\Users\cagla\source\repos\VFrameworkBlazor\VFrameworkBlazor\_Imports.razor"
+#line 6 "C:\Users\CGU\source\repos\Virtualisation_framework\_Imports.razor"
 using Microsoft.AspNetCore.Components.Web;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 7 "C:\Users\cagla\source\repos\VFrameworkBlazor\VFrameworkBlazor\_Imports.razor"
+#line 7 "C:\Users\CGU\source\repos\Virtualisation_framework\_Imports.razor"
 using Microsoft.AspNetCore.Components.Web.Virtualization;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 8 "C:\Users\cagla\source\repos\VFrameworkBlazor\VFrameworkBlazor\_Imports.razor"
+#line 8 "C:\Users\CGU\source\repos\Virtualisation_framework\_Imports.razor"
 using Microsoft.JSInterop;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 9 "C:\Users\cagla\source\repos\VFrameworkBlazor\VFrameworkBlazor\_Imports.razor"
+#line 9 "C:\Users\CGU\source\repos\Virtualisation_framework\_Imports.razor"
 using VFrameworkBlazor;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 10 "C:\Users\cagla\source\repos\VFrameworkBlazor\VFrameworkBlazor\_Imports.razor"
+#line 10 "C:\Users\CGU\source\repos\Virtualisation_framework\_Imports.razor"
 using VFrameworkBlazor.Shared;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 11 "C:\Users\cagla\source\repos\VFrameworkBlazor\VFrameworkBlazor\_Imports.razor"
+#line 11 "C:\Users\CGU\source\repos\Virtualisation_framework\_Imports.razor"
 using HashiCorp.Cdktf;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 12 "C:\Users\cagla\source\repos\VFrameworkBlazor\VFrameworkBlazor\_Imports.razor"
+#line 12 "C:\Users\CGU\source\repos\Virtualisation_framework\_Imports.razor"
 using HashiCorp.Cdktf.Providers.Azurerm;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 2 "C:\Users\cagla\source\repos\VFrameworkBlazor\VFrameworkBlazor\Pages\Index.razor"
+#line 2 "C:\Users\CGU\source\repos\Virtualisation_framework\Pages\Index.razor"
 using Blazority;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 3 "C:\Users\cagla\source\repos\VFrameworkBlazor\VFrameworkBlazor\Pages\Index.razor"
+#line 3 "C:\Users\CGU\source\repos\Virtualisation_framework\Pages\Index.razor"
 using VFrameworkBlazor.Terraform;
 
 #line default
@@ -119,22 +119,19 @@ using VFrameworkBlazor.Terraform;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 13 "C:\Users\cagla\source\repos\VFrameworkBlazor\VFrameworkBlazor\Pages\Index.razor"
+#line 15 "C:\Users\CGU\source\repos\Virtualisation_framework\Pages\Index.razor"
       
     async Task SynthDefault()
     {
-        HashiCorp.Cdktf.App app = new HashiCorp.Cdktf.App();
-        new Terraform.TfLogic(app, "azure");
-        app.Synth();
+        TfLogic.init();
         bool confirmed = await JsRuntime.InvokeAsync<bool>("confirm", "The Terraform files have been generated");
-
     }
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 24 "C:\Users\cagla\source\repos\VFrameworkBlazor\VFrameworkBlazor\Pages\Index.razor"
+#line 23 "C:\Users\CGU\source\repos\Virtualisation_framework\Pages\Index.razor"
        
     async Task warning()
     {

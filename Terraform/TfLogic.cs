@@ -24,7 +24,14 @@ namespace VFrameworkBlazor.Terraform
                 Name = "TerraformVNet",
                 ResourceGroupName = "RGtest"
             });
+        }
 
+        public static void init()
+        {
+            HashiCorp.Cdktf.App app = new HashiCorp.Cdktf.App();
+            new TfLogic(app, "azure");
+            app.Synth();
+            
         }
     }
 }
