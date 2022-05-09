@@ -10,14 +10,13 @@
 <br />
 <Button Label="Default" Variant="Primary" @onclick="SynthDefault"></Button>
 <Button Label="Custom" Variant="Info" @onclick="warning"></Button>
+
+
 @code{
     async Task SynthDefault()
     {
-        HashiCorp.Cdktf.App app = new HashiCorp.Cdktf.App();
-        new Terraform.TfLogic(app, "azure");
-        app.Synth();
+        TfLogic.init();
         bool confirmed = await JsRuntime.InvokeAsync<bool>("confirm", "The Terraform files have been generated");
-
     }
 }
 
