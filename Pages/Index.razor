@@ -1,36 +1,39 @@
 ﻿@page "/"
-@using Blazority
 @using VFrameworkBlazor.Terraform
 @using VFrameworkBlazor.Utility
+@using Radzen.Blazor
 @inject IJSRuntime JsRuntime
 @inject NavigationManager NavMan
 <h1>Virtualisation Framework</h1>
+
 
 <p>
     Would you like to make a new concept environment or deploy a default one?
 </p>
 <br />
-<Button Label="Default" Variant="Primary" @onclick="SynthDefault"></Button>
-@*<Spinner Inline="true"></Spinner>*@
 
-<Button Label="Custom" Variant="Info" @onclick="NavToCustom"></Button>
-
+<RadzenButton style="width: 160px" IsBusy=@busy Click=@SynthDefault Text="Default" />
+<RadzenButton Click=@NavToCustom Text="Make custom" ButtonStyle="ButtonStyle.Light" />
 
 @code{
+    bool busy = false;
+    bool loading = false;
     async Task SynthDefault()
     {
+        loading = true;
+        busy = true;
+        await Task.Yield();
         TfLogic.Init();
         await JsRuntime.InvokeVoidAsync("alert", "The Terraform files have been generated");
         await JsRuntime.InvokeVoidAsync("alert", "clean the cdktf.out dir");
         FileCleanup.CleanUpOutFolder();
+        busy = false;
+        loading = false;
+        await Task.Yield();
     }
-}
-
-@code {
     async Task NavToCustom()
     {
         NavMan.NavigateTo("customtf");
     }
 }
 
-<SurveyPrompt Title="How is Blazor working for you?" />
