@@ -16,6 +16,6 @@
     <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
   </PropertyGroup>
   <ImportGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
-    <Import Project="$(NuGetPackageRoot)blazority\0.11.0\buildTransitive\Blazority.props" Condition="Exists('$(NuGetPackageRoot)blazority\0.11.0\buildTransitive\Blazority.props')" />
+    <Import Project="$(NuGetPackageRoot)radzen.blazor\3.18.8\buildTransitive\Radzen.Blazor.props" Condition="Exists('$(NuGetPackageRoot)radzen.blazor\3.18.8\buildTransitive\Radzen.Blazor.props')" />
   </ImportGroup>
 </Project>

@@ -13,99 +13,113 @@ namespace VFrameworkBlazor.Pages
     using System.Threading.Tasks;
     using Microsoft.AspNetCore.Components;
 #nullable restore
-#line 1 "C:\Users\CGU\source\repos\Virtualisation_framework\_Imports.razor"
+#line 1 "\\ws2019\g\repos\C#\VFrameworkBlazor\VFrameworkBlazor\_Imports.razor"
 using System.Net.Http;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 2 "C:\Users\CGU\source\repos\Virtualisation_framework\_Imports.razor"
+#line 2 "\\ws2019\g\repos\C#\VFrameworkBlazor\VFrameworkBlazor\_Imports.razor"
 using Microsoft.AspNetCore.Authorization;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 3 "C:\Users\CGU\source\repos\Virtualisation_framework\_Imports.razor"
+#line 3 "\\ws2019\g\repos\C#\VFrameworkBlazor\VFrameworkBlazor\_Imports.razor"
 using Microsoft.AspNetCore.Components.Authorization;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 4 "C:\Users\CGU\source\repos\Virtualisation_framework\_Imports.razor"
+#line 4 "\\ws2019\g\repos\C#\VFrameworkBlazor\VFrameworkBlazor\_Imports.razor"
 using Microsoft.AspNetCore.Components.Forms;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 5 "C:\Users\CGU\source\repos\Virtualisation_framework\_Imports.razor"
+#line 5 "\\ws2019\g\repos\C#\VFrameworkBlazor\VFrameworkBlazor\_Imports.razor"
 using Microsoft.AspNetCore.Components.Routing;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 6 "C:\Users\CGU\source\repos\Virtualisation_framework\_Imports.razor"
+#line 6 "\\ws2019\g\repos\C#\VFrameworkBlazor\VFrameworkBlazor\_Imports.razor"
 using Microsoft.AspNetCore.Components.Web;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 7 "C:\Users\CGU\source\repos\Virtualisation_framework\_Imports.razor"
+#line 7 "\\ws2019\g\repos\C#\VFrameworkBlazor\VFrameworkBlazor\_Imports.razor"
 using Microsoft.AspNetCore.Components.Web.Virtualization;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 8 "C:\Users\CGU\source\repos\Virtualisation_framework\_Imports.razor"
+#line 8 "\\ws2019\g\repos\C#\VFrameworkBlazor\VFrameworkBlazor\_Imports.razor"
 using Microsoft.JSInterop;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 9 "C:\Users\CGU\source\repos\Virtualisation_framework\_Imports.razor"
+#line 9 "\\ws2019\g\repos\C#\VFrameworkBlazor\VFrameworkBlazor\_Imports.razor"
 using VFrameworkBlazor;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 10 "C:\Users\CGU\source\repos\Virtualisation_framework\_Imports.razor"
+#line 10 "\\ws2019\g\repos\C#\VFrameworkBlazor\VFrameworkBlazor\_Imports.razor"
 using VFrameworkBlazor.Shared;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 11 "C:\Users\CGU\source\repos\Virtualisation_framework\_Imports.razor"
+#line 11 "\\ws2019\g\repos\C#\VFrameworkBlazor\VFrameworkBlazor\_Imports.razor"
 using HashiCorp.Cdktf;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 12 "C:\Users\CGU\source\repos\Virtualisation_framework\_Imports.razor"
+#line 12 "\\ws2019\g\repos\C#\VFrameworkBlazor\VFrameworkBlazor\_Imports.razor"
 using HashiCorp.Cdktf.Providers.Azurerm;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 2 "C:\Users\CGU\source\repos\Virtualisation_framework\Pages\Index.razor"
-using Blazority;
+#line 13 "\\ws2019\g\repos\C#\VFrameworkBlazor\VFrameworkBlazor\_Imports.razor"
+using Radzen;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 3 "C:\Users\CGU\source\repos\Virtualisation_framework\Pages\Index.razor"
+#line 2 "\\ws2019\g\repos\C#\VFrameworkBlazor\VFrameworkBlazor\Pages\Index.razor"
 using VFrameworkBlazor.Terraform;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 3 "\\ws2019\g\repos\C#\VFrameworkBlazor\VFrameworkBlazor\Pages\Index.razor"
+using VFrameworkBlazor.Utility;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 4 "\\ws2019\g\repos\C#\VFrameworkBlazor\VFrameworkBlazor\Pages\Index.razor"
+using Radzen.Blazor;
 
 #line default
 #line hidden
@@ -119,34 +133,32 @@ using VFrameworkBlazor.Terraform;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 15 "C:\Users\CGU\source\repos\Virtualisation_framework\Pages\Index.razor"
+#line 18 "\\ws2019\g\repos\C#\VFrameworkBlazor\VFrameworkBlazor\Pages\Index.razor"
       
+    bool busy = false;
+    bool loading = false;
     async Task SynthDefault()
     {
-        TfLogic.init();
-        bool confirmed = await JsRuntime.InvokeAsync<bool>("confirm", "The Terraform files have been generated");
+        loading = true;
+        busy = true;
+        await Task.Yield();
+        TfLogic.Init();
+        await JsRuntime.InvokeVoidAsync("alert", "The Terraform files have been generated");
+        await JsRuntime.InvokeVoidAsync("alert", "clean the cdktf.out dir");
+        FileCleanup.CleanUpOutFolder();
+        busy = false;
+        loading = false;
+        await Task.Yield();
     }
-
-#line default
-#line hidden
-#nullable disable
-#nullable restore
-#line 23 "C:\Users\CGU\source\repos\Virtualisation_framework\Pages\Index.razor"
-       
-    async Task warning()
+    async Task NavToCustom()
     {
-        bool confirmed = await JsRuntime.InvokeAsync<bool>("confirm", "Are you sure?"); // Confirm
-
-        if (confirmed)
-        {
-            string prompted = await JsRuntime.InvokeAsync<string>("prompt", "thanks"); // Prompt
-
-        }
+        NavMan.NavigateTo("customtf");
     }
 
 #line default
 #line hidden
 #nullable disable
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private NavigationManager NavMan { get; set; }
         [global::Microsoft.AspNetCore.Components.InjectAttribute] private IJSRuntime JsRuntime { get; set; }
     }
 }

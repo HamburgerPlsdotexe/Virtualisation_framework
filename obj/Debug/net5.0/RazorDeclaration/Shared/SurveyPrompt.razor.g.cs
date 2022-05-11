@@ -13,85 +13,99 @@ namespace VFrameworkBlazor.Shared
     using System.Threading.Tasks;
     using Microsoft.AspNetCore.Components;
 #nullable restore
-#line 1 "C:\Users\cagla\source\repos\VFrameworkBlazor\VFrameworkBlazor\_Imports.razor"
+#line 1 "\\ws2019\g\repos\C#\VFrameworkBlazor\VFrameworkBlazor\_Imports.razor"
 using System.Net.Http;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 2 "C:\Users\cagla\source\repos\VFrameworkBlazor\VFrameworkBlazor\_Imports.razor"
+#line 2 "\\ws2019\g\repos\C#\VFrameworkBlazor\VFrameworkBlazor\_Imports.razor"
 using Microsoft.AspNetCore.Authorization;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 3 "C:\Users\cagla\source\repos\VFrameworkBlazor\VFrameworkBlazor\_Imports.razor"
+#line 3 "\\ws2019\g\repos\C#\VFrameworkBlazor\VFrameworkBlazor\_Imports.razor"
 using Microsoft.AspNetCore.Components.Authorization;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 4 "C:\Users\cagla\source\repos\VFrameworkBlazor\VFrameworkBlazor\_Imports.razor"
+#line 4 "\\ws2019\g\repos\C#\VFrameworkBlazor\VFrameworkBlazor\_Imports.razor"
 using Microsoft.AspNetCore.Components.Forms;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 5 "C:\Users\cagla\source\repos\VFrameworkBlazor\VFrameworkBlazor\_Imports.razor"
+#line 5 "\\ws2019\g\repos\C#\VFrameworkBlazor\VFrameworkBlazor\_Imports.razor"
 using Microsoft.AspNetCore.Components.Routing;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 6 "C:\Users\cagla\source\repos\VFrameworkBlazor\VFrameworkBlazor\_Imports.razor"
+#line 6 "\\ws2019\g\repos\C#\VFrameworkBlazor\VFrameworkBlazor\_Imports.razor"
 using Microsoft.AspNetCore.Components.Web;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 7 "C:\Users\cagla\source\repos\VFrameworkBlazor\VFrameworkBlazor\_Imports.razor"
+#line 7 "\\ws2019\g\repos\C#\VFrameworkBlazor\VFrameworkBlazor\_Imports.razor"
 using Microsoft.AspNetCore.Components.Web.Virtualization;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 8 "C:\Users\cagla\source\repos\VFrameworkBlazor\VFrameworkBlazor\_Imports.razor"
+#line 8 "\\ws2019\g\repos\C#\VFrameworkBlazor\VFrameworkBlazor\_Imports.razor"
 using Microsoft.JSInterop;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 9 "C:\Users\cagla\source\repos\VFrameworkBlazor\VFrameworkBlazor\_Imports.razor"
+#line 9 "\\ws2019\g\repos\C#\VFrameworkBlazor\VFrameworkBlazor\_Imports.razor"
 using VFrameworkBlazor;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 10 "C:\Users\cagla\source\repos\VFrameworkBlazor\VFrameworkBlazor\_Imports.razor"
+#line 10 "\\ws2019\g\repos\C#\VFrameworkBlazor\VFrameworkBlazor\_Imports.razor"
 using VFrameworkBlazor.Shared;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 11 "C:\Users\cagla\source\repos\VFrameworkBlazor\VFrameworkBlazor\_Imports.razor"
+#line 11 "\\ws2019\g\repos\C#\VFrameworkBlazor\VFrameworkBlazor\_Imports.razor"
 using HashiCorp.Cdktf;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 12 "C:\Users\cagla\source\repos\VFrameworkBlazor\VFrameworkBlazor\_Imports.razor"
+#line 12 "\\ws2019\g\repos\C#\VFrameworkBlazor\VFrameworkBlazor\_Imports.razor"
 using HashiCorp.Cdktf.Providers.Azurerm;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 13 "\\ws2019\g\repos\C#\VFrameworkBlazor\VFrameworkBlazor\_Imports.razor"
+using Radzen;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 14 "\\ws2019\g\repos\C#\VFrameworkBlazor\VFrameworkBlazor\_Imports.razor"
+using Radzen.Blazor;
 
 #line default
 #line hidden
@@ -104,7 +118,7 @@ using HashiCorp.Cdktf.Providers.Azurerm;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 12 "C:\Users\cagla\source\repos\VFrameworkBlazor\VFrameworkBlazor\Shared\SurveyPrompt.razor"
+#line 12 "\\ws2019\g\repos\C#\VFrameworkBlazor\VFrameworkBlazor\Shared\SurveyPrompt.razor"
        
     // Demonstrates how a parent component can supply parameters
     [Parameter]
