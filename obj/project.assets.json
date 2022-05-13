@@ -916,19 +916,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\cagla\\.nuget\\packages\\": {}
+    "C:\\Users\\CGU\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\cagla\\source\\repos\\VFrameworkBlazor\\VFrameworkBlazor\\VFrameworkBlazor.csproj",
+      "projectUniqueName": "C:\\Users\\CGU\\source\\repos\\Virtualisation_framework\\VFrameworkBlazor.csproj",
       "projectName": "VFrameworkBlazor",
-      "projectPath": "C:\\Users\\cagla\\source\\repos\\VFrameworkBlazor\\VFrameworkBlazor\\VFrameworkBlazor.csproj",
-      "packagesPath": "C:\\Users\\cagla\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\cagla\\source\\repos\\VFrameworkBlazor\\VFrameworkBlazor\\obj\\",
+      "projectPath": "C:\\Users\\CGU\\source\\repos\\Virtualisation_framework\\VFrameworkBlazor.csproj",
+      "packagesPath": "C:\\Users\\CGU\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\CGU\\source\\repos\\Virtualisation_framework\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\cagla\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\CGU\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -981,12 +986,6 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "downloadDependencies": [
-          {
-            "name": "Microsoft.NETCore.App.Host.win-x64",
-            "version": "[5.0.16, 5.0.16]"
-          }
-        ],
         "frameworkReferences": {
           "Microsoft.AspNetCore.App": {
             "privateAssets": "none"
@@ -995,7 +994,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.200\\RuntimeIdentifierGraph.json"
       }
     }
   }
