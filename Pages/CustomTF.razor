@@ -1,0 +1,39 @@
+﻿@page "/customtf"
+@using VFrameworkBlazor.Terraform
+@using VFrameworkBlazor.Utility
+@using Radzen.Blazor
+@using System.Collections.Generic;
+
+<h1>Custom environment creation</h1>
+
+<div class="col-md-6 col-lg-4 p-3">
+        <RadzenCard>
+            <h4 class="mb-4">Solution details</h4>
+            <RadzenTextBox Placeholder="Customer" Change=@(args => passArgs(args)) Class="w-50" />
+            <RadzenTextBox Placeholder="Solution" Change=@(args => passArgs(args)) Class="w-50" />
+            <RadzenTextBox Placeholder="Region" Change=@(args => passArgs(args)) Class="w-50" />
+        </RadzenCard>
+    </div>
+
+<div class="col-md-6 col-lg-4 p-3">
+    <RadzenCard>
+        <h4 class="mb-4">Resources</h4>
+        <RadzenTextBox Placeholder="Customer" Change=@(args => passArgs(args)) Class="w-50" />
+        <RadzenTextBox Change=@(args => passArgs(args)) Class="w-50" />
+        <RadzenTextBox Change=@(args => passArgs(args)) Class="w-50" />
+    </RadzenCard>
+</div>
+@code
+{
+    List<string> SolutionDetails = new List<string>();
+
+    void passArgs(string argument)
+    {
+        SolutionDetails.Add(argument);
+    }
+
+    //foreach(string item in SolutionDetails)
+    //{
+
+    //}
+}

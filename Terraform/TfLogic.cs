@@ -19,16 +19,16 @@ namespace VFrameworkBlazor.Terraform
 
             new VirtualNetwork(this, "TfVnet", new VirtualNetworkConfig
             {
-                Location = "euwest",
+                Location = "westeurope",
                 AddressSpace = new [] {"10.0.0.0/24"},
                 Name = "TerraformVNet",
                 ResourceGroupName = "RGtest"
             });
         }
 
-        public static void init()
+        public static void Init()
         {
-            HashiCorp.Cdktf.App app = new HashiCorp.Cdktf.App();
+            HashiCorp.Cdktf.App app = new();
             new TfLogic(app, "azure");
             app.Synth();
             

@@ -3,7 +3,7 @@
     "metadata": {
       "backend": "local",
       "stackName": "azure",
-      "version": "0.10.3"
+      "version": "0.10.4"
     },
     "outputs": {
     }
@@ -28,7 +28,7 @@
         "address_space": [
           "10.0.0.0/24"
         ],
-        "location": "euwest",
+        "location": "westeurope",
         "name": "TerraformVNet",
         "resource_group_name": "RGtest"
       }
@@ -37,7 +37,7 @@
   "terraform": {
     "backend": {
       "local": {
-        "path": "C:\\Users\\cagla\\source\\repos\\VFrameworkBlazor\\VFrameworkBlazor\\terraform.azure.tfstate"
+        "path": "C:\\Users\\CGU\\source\\repos\\Virtualisation_framework\\terraform.azure.tfstate"
       }
     },
     "required_providers": {
