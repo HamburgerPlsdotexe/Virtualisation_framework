@@ -15,7 +15,7 @@ namespace VFrameworkBlazor
     {
         public static void Main(string[] args)
         {
-            //CreateHostBuilder(args).Build().Run();
+            CreateHostBuilder(args).Build().Run();
             //VFrameworkBlazor.Utility.NameGenerator test = new("CAS", "SYS", "we", "dev", "w", "l", "web", "sql", "auth", "backlog");
             //Dictionary<string, string> dict = test.getDict();
             //Dictionary<string, string>.KeyCollection keys = dict.Keys;
