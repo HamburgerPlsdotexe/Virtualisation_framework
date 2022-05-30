@@ -9,24 +9,14 @@ namespace VFrameworkBlazor.Utility
         {
             try
             {
-                string path = Directory.GetCurrentDirectory() + @"\cdktf.out\"; // get the path of cdktf.out folder
-                Console.WriteLine(path);
-                if (Directory.Exists(path))
-                {
-                    DirectoryInfo di = new DirectoryInfo(path); // Instantiate a DirectoryInfo object for easy enumeration and deletion of files and directories
-                    foreach(FileInfo file in di.GetFiles()) 
-                    {
-                        file.Delete(); // Delete the files after being done 
-                    }
-                    foreach(DirectoryInfo dir in di.GetDirectories())
-                    {
-                        dir.Delete(true); // Delete the folders once they are empty
-                    }
-                }
-                Directory.Delete(path);
+                string path = Directory.GetCurrentDirectory() + @"\cdktf.out\stacks\azure\";
+                string[] keep = new[] { "terraform.exe", "terraform-provider-azurerm" };
+                
+                
+
                 Console.WriteLine("Generated files have been deleted");
             }
-            catch(Exception e)
+            catch (Exception e)
             {
                 Console.WriteLine(e);
             }

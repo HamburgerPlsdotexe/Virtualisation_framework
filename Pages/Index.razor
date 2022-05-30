@@ -10,6 +10,7 @@
 <p>
     Would you like to make a new concept environment or deploy a default one?
 </p>
+
 <br />
 
 <RadzenButton style="width: 160px" IsBusy=@busy Click=@SynthDefault Text="Default" />
@@ -17,10 +18,9 @@
 
 @code{
     bool busy = false;
-    bool loading = false;
+
     async Task SynthDefault()
     {
-        loading = true;
         busy = true;
         await Task.Yield();
         TfLogic.Init();
@@ -28,9 +28,9 @@
         await JsRuntime.InvokeVoidAsync("alert", "clean the cdktf.out dir");
         FileCleanup.CleanUpOutFolder();
         busy = false;
-        loading = false;
         await Task.Yield();
     }
+
     async Task NavToCustom()
     {
         NavMan.NavigateTo("customtf");

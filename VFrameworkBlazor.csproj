@@ -8,6 +8,7 @@
     <PackageReference Include="Constructs" Version="10.0.130" />
     <PackageReference Include="HashiCorp.Cdktf" Version="0.10.4" />
     <PackageReference Include="HashiCorp.Cdktf.Providers.Azurerm" Version="0.6.41" />
+    <PackageReference Include="HtmlAgilityPack" Version="1.11.42" />
     <PackageReference Include="Radzen.Blazor" Version="3.18.8" />
   </ItemGroup>
 

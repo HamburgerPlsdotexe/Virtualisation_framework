@@ -21,11 +21,11 @@ namespace VFrameworkBlazor.Utility
         readonly string VMOs2;
 
         readonly string Database1;
-        readonly string? Database2;
+        readonly string Database2;
 
-        Dictionary<string, string> ResourceNames = new Dictionary<string, string>();
+        private Dictionary<string, string> ResourceNames = new Dictionary<string, string>();
 
-        internal NameGenerator(string Customer, string Solution, string Region, string EnvKind, string VMOs1, string VMOs2, string SubnetRole1, string SubnetRole2, string Database1, string? Database2)
+        internal NameGenerator(string Customer, string Solution, string Region, string EnvKind="dev", string VMOs1= "w", string VMOs2="l", string SubnetRole1="web", string SubnetRole2="sql", string Database1="auth", string Database2="backlog")
         {
             this.Customer = Customer;
             this.Solution = Solution;
@@ -39,9 +39,9 @@ namespace VFrameworkBlazor.Utility
             this.Database2 = Database2;
         }
 
-        public void getName()
+        public Dictionary<string, string> GetResNames()
         {
-            Console.WriteLine();
+            return ResourceNames;
         }
 
         private string EnvironmentName(string variant, string role = "", string os = "")
