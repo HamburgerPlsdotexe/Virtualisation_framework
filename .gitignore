@@ -134,6 +134,8 @@ Desktop.ini
 # Custom files
 cdktf.out/stacks/azure/.terraform.lock.hcl
 cdktf.out/stacks/azure/plan.txt
+cdktf.out/stacks/azure/cdk.tf.json
+cdktf.out/manifest.json
 
 # Recycle Bin used on file shares
 $RECYCLE.BIN/

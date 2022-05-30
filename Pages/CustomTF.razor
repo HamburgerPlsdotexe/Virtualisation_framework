@@ -18,7 +18,8 @@
 <div class="col-md-6 col-lg-4 p-3">
     <RadzenCard>
         <h4 class="mb-4">Resources</h4>
-        <RadzenTextBox Placeholder="Customer" Change=@(args => passArgs(args)) Class="w-50" />
+        <RadzenDropDown AllowClear="true" TValue="string" FilterCaseSensitivity="FilterCaseSensitivity.CaseInsensitive" AllowFiltering="true" Class="w-100"
+                        Placeholder="Select..." @*Data=@customers TextProperty="CompanyName" ValueProperty="CustomerID" Change=@(args => OnChange(args, "DropDown with placeholder"))*@ />        
         <RadzenTextBox Change=@(args => passArgs(args)) Class="w-50" />
         <RadzenTextBox Change=@(args => passArgs(args)) Class="w-50" />
     </RadzenCard>

@@ -26,7 +26,7 @@
         TfLogic.Init();
         await JsRuntime.InvokeVoidAsync("alert", "The Terraform files have been generated");
         await JsRuntime.InvokeVoidAsync("alert", "clean the cdktf.out dir");
-        FileCleanup.CleanUpOutFolder();
+        FileOps.CleanUpOutFolder();
         busy = false;
         await Task.Yield();
     }

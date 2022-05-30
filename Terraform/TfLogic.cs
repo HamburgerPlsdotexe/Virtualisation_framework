@@ -19,7 +19,7 @@ namespace VFrameworkBlazor.Terraform
 
             new VirtualNetwork(this, "TfVnet", new VirtualNetworkConfig
             {
-                Location = "westeurope",
+                Location = "westeuroe",
                 AddressSpace = new [] {"10.0.0.0/24"},
                 Name = "TerraformVNet",
                 ResourceGroupName = "RGtest"
