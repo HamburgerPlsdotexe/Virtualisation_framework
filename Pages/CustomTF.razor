@@ -1,40 +1,51 @@
 ﻿@page "/customtf"
-@using VFrameworkBlazor.Terraform
 @using VFrameworkBlazor.Utility
 @using Radzen.Blazor
 @using System.Collections.Generic;
+@inject IJSRuntime JsRuntime
 
 <h1>Custom environment creation</h1>
 
 <div class="col-md-6 col-lg-4 p-3">
-        <RadzenCard>
-            <h4 class="mb-4">Solution details</h4>
-            <RadzenTextBox Placeholder="Customer" Change=@(args => passArgs(args)) Class="w-50" />
-            <RadzenTextBox Placeholder="Solution" Change=@(args => passArgs(args)) Class="w-50" />
-            <RadzenTextBox Placeholder="Region" Change=@(args => passArgs(args)) Class="w-50" />
-        </RadzenCard>
-    </div>
+    <RadzenCard>
+        <h4 class="mb-4">Solution details</h4>
+        <RadzenTextBox Placeholder="Customer" @bind-Value=Customer Class="w-50" />
+        <RadzenTextBox Placeholder="Solution" @bind-Value=Solution  Class="w-50" />
+        <RadzenDropDown AllowClear="true" AllowFiltering="true" FilterCaseSensitivity="FilterCaseSensitivity.CaseInsensitive" @bind-Value=@Region Placeholder="Select region"
+                        Data=@regions  Class="w-50" />
+    </RadzenCard>
+</div>
 
 <div class="col-md-6 col-lg-4 p-3">
     <RadzenCard>
         <h4 class="mb-4">Resources</h4>
-        <RadzenDropDown AllowClear="true" TValue="string" FilterCaseSensitivity="FilterCaseSensitivity.CaseInsensitive" AllowFiltering="true" Class="w-100"
-                        Placeholder="Select..." @*Data=@customers TextProperty="CompanyName" ValueProperty="CustomerID" Change=@(args => OnChange(args, "DropDown with placeholder"))*@ />        
-        <RadzenTextBox Change=@(args => passArgs(args)) Class="w-50" />
-        <RadzenTextBox Change=@(args => passArgs(args)) Class="w-50" />
+        <RadzenTextBox  Class="w-50" />
+        <RadzenTextBox  Class="w-50" />
+        <RadzenTextBox  Class="w-50" />
     </RadzenCard>
 </div>
+<div class="col-md-6 col-lg-4 p-3">
+    <RadzenButton style="width: 160px" IsBusy=@busy Click=@SynthCustom Text="Default" />
+</div>
+
 @code
 {
-    List<string> SolutionDetails = new List<string>();
+    bool busy = false;
+    
+    IEnumerable<string> regions = FileOps.JsonFileToDict(FileOps._solutionDir + @"\AzureData\AzureRegions.json").Keys;
 
-    void passArgs(string argument)
+    string Customer;
+    string Solution;
+    string Region;
+    
+    async Task SynthCustom()
     {
-        SolutionDetails.Add(argument);
+        busy = true;
+        await Task.Yield();
+        Terraform.CustomTF.Init(new NameGenerator(Customer, Solution, Region));
+        await JsRuntime.InvokeVoidAsync("alert", "The Terraform json plan has been generated");
+        //await JsRuntime.InvokeVoidAsync("alert", "clean the cdktf.out dir");
+        busy = false;
+        await Task.Yield();
     }
-
-    //foreach(string item in SolutionDetails)
-    //{
-
-    //}
 }

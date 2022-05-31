@@ -1,16 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Constructs;
+﻿using Constructs;
 using HashiCorp.Cdktf;
 using HashiCorp.Cdktf.Providers.Azurerm;
+using VFrameworkBlazor.Utility;
 
 namespace VFrameworkBlazor.Terraform
 {
-    public class TfLogic : TerraformStack
+    public class CustomTF : TerraformStack
     {
-        public TfLogic(Construct scope, string id) : base(scope, id)
+        internal CustomTF(Construct scope, string id, NameGenerator ng) : base(scope, id)
         {
             new AzurermProvider(this, "AzureRm", new AzurermProviderConfig
             {
@@ -20,16 +17,16 @@ namespace VFrameworkBlazor.Terraform
             new VirtualNetwork(this, "TfVnet", new VirtualNetworkConfig
             {
                 Location = "westeuroe",
-                AddressSpace = new [] {"10.0.0.0/24"},
+                AddressSpace = new[] { "10.0.0.0/24" },
                 Name = "TerraformVNet",
                 ResourceGroupName = "RGtest"
             });
         }
 
-        public static void Init()
+        internal static void Init(NameGenerator ng)
         {
             HashiCorp.Cdktf.App app = new();
-            new TfLogic(app, "azure");
+            new CustomTF(app, "azure", ng);
             app.Synth(); 
         }
     }

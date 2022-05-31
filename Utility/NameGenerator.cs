@@ -27,8 +27,8 @@ namespace VFrameworkBlazor.Utility
 
         internal NameGenerator(string Customer, string Solution, string Region, string EnvKind="dev", string VMOs1= "w", string VMOs2="l", string SubnetRole1="web", string SubnetRole2="sql", string Database1="auth", string Database2="backlog")
         {
-            this.Customer = Customer;
-            this.Solution = Solution;
+            this.Customer = Customer.Substring(0,2);
+            this.Solution = Solution.Substring(0,2);
             this.Region = Region;
             this.EnvKind = EnvKind;
             this.VMOs1 = VMOs1;

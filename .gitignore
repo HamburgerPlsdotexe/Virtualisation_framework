@@ -144,3 +144,6 @@ $RECYCLE.BIN/
 .DS_Store
 
 _NCrunch*
+/AzureData/AzLogin.bat
+/Utility/CmdOps.cs
+/Utility/RegExOps.cs

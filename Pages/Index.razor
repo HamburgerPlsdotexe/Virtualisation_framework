@@ -15,6 +15,8 @@
 
 <RadzenButton style="width: 160px" IsBusy=@busy Click=@SynthDefault Text="Default" />
 <RadzenButton Click=@NavToCustom Text="Make custom" ButtonStyle="ButtonStyle.Light" />
+<RadzenButton Click=@Login Text="Az Login" ButtonStyle="ButtonStyle.Light" />
+
 
 @code{
     bool busy = false;
@@ -23,7 +25,7 @@
     {
         busy = true;
         await Task.Yield();
-        TfLogic.Init();
+        Terraform.DefaultTFTemplate.Init();
         await JsRuntime.InvokeVoidAsync("alert", "The Terraform files have been generated");
         await JsRuntime.InvokeVoidAsync("alert", "clean the cdktf.out dir");
         FileOps.CleanUpOutFolder();
@@ -34,6 +36,11 @@
     async Task NavToCustom()
     {
         NavMan.NavigateTo("customtf");
+    }
+
+    async Task Login()
+    {
+        CmdOps.AzureLogin();
     }
 }
 
