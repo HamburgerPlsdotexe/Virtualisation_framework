@@ -127,6 +127,7 @@ Desktop.ini
 # Just folders
 ./cdktf.out
 ./obj
+./vs/*
 
 # Recycle Bin used on file shares
 $RECYCLE.BIN/
