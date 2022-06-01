@@ -125,6 +125,17 @@ ehthumbs.db
 Desktop.ini
 
 # Just folders
+.cdktf.out/
+.obj/
+.bin/
+.vs/
+.terraform/
+
+# Custom files
+cdktf.out/stacks/azure/.terraform.lock.hcl
+cdktf.out/stacks/azure/plan.txt
+cdktf.out/stacks/azure/cdk.tf.json
+cdktf.out/manifest.json
 ./cdktf.out
 ./obj
 ./vs/*
@@ -136,3 +147,6 @@ $RECYCLE.BIN/
 .DS_Store
 
 _NCrunch*
+/AzureData/AzLogin.bat
+/Utility/CmdOps.cs
+/Utility/RegExOps.cs

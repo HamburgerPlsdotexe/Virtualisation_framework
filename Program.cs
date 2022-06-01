@@ -1,8 +1,13 @@
+using HashiCorp.Cdktf;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
-using System.Diagnostics;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+using System.IO;
 
 namespace VFrameworkBlazor
 {
@@ -10,9 +15,8 @@ namespace VFrameworkBlazor
     {
         public static void Main(string[] args)
         {
-            //string comm = "/C terraform.exe init";
-            //Process.Start("cmd.exe", comm);
-
+            //Console.WriteLine("running Main");
+            //Utility.CmdOps.AzureLogin();
             CreateHostBuilder(args).Build().Run();
             //VFrameworkBlazor.Utility.NameGenerator test = new("CAS", "SYS", "we", "dev", "w", "l", "web", "sql", "auth", "backlog");
             //Dictionary<string, string> dict = test.getDict();
@@ -32,5 +36,6 @@ namespace VFrameworkBlazor
                 {
                     webBuilder.UseStartup<Startup>();
                 });
+
     }
 }
